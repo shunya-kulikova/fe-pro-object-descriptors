@@ -9,8 +9,8 @@
  * @returns string[]
  */
 export const getKeysByDescriptor = (object, descriptor) => {
-    return Object.entries(Object.getOwnPropertyDescriptors(object)).reduce(function(newArr, [prop, desc]){
-        if(desc[descriptor]){        
+    return Object.entries(Object.getOwnPropertyDescriptors(object)).reduce(function(newArr, [prop, des]){
+        if(des[descriptor]){        
          newArr.push(prop);
         };
         return newArr;
